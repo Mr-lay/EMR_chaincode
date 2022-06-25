@@ -1,0 +1,86 @@
+{
+  "pkgName": "基于区块链的电子病例系统",
+  "appPtfType":8,
+  "ccLanguage":2,
+  "mainPath":"EMR",
+  "ccName": "bsnBaseCC232",
+  "initParam":"",
+  "pkgVersion": "1.0.0",
+  "pkgFee":0,
+  "publishUser":"LXL",
+  "pkgDesc":"基于区块链的电子病例系统，提供患者病例数据共享与隐私安全保护功能",
+  "funcs": [
+    {
+      "chaincodeViewName": "保存数据",
+      "chaincodeFunc": "set",
+      "chaincodeFuncType": "1",
+      "pkgType": "saas",
+      "nodes": []
+    },
+    {
+      "chaincodeViewName": "保存数据事件",
+      "chaincodeFunc": "event_set",
+      "chaincodeFuncType": "3",
+      "pkgType": "saas",
+      "nodes": []
+    },
+    {
+      "chaincodeViewName": "更新数据",
+      "chaincodeFunc": "update",
+      "chaincodeFuncType": "1",
+      "pkgType": "saas",
+      "nodes": []
+    },
+    {
+      "chaincodeViewName": "更新数据事件",
+      "chaincodeFunc": "event_update",
+      "chaincodeFuncType": "3",
+      "pkgType": "saas",
+      "nodes": []
+    },
+    {
+      "chaincodeViewName": "删除数据",
+      "chaincodeFunc": "delete",
+      "chaincodeFuncType": "1",
+      "pkgType": "saas",
+      "nodes": []
+    },
+    {
+      "chaincodeViewName": "删除数据事件",
+      "chaincodeFunc": "event_delete",
+      "chaincodeFuncType": "3",
+      "pkgType": "saas",
+      "nodes": []
+    },
+    {
+      "chaincodeViewName": "获取数据",
+      "chaincodeFunc": "get",
+      "chaincodeFuncType": "2",
+      "pkgType": "saas",
+      "nodes": []
+    },
+    {
+      "chaincodeViewName": "获取历史数据",
+      "chaincodeFunc": "getHistory",
+      "chaincodeFuncType": "2",
+      "pkgType": "saas",
+      "nodes": []
+    }
+  ],
+  "roles": [
+    {
+      "roleName": "系统管理员",
+      "appDesc": "包含保存数据、更新数据、删除数据、获取数据、获取历史数据五个基本数据操作权限以及保存数据、更细数据、删除数据的事件监听权限",
+      "funcs": [
+        "set",
+        "update",
+        "delete",
+        "event_set",
+        "event_update",
+        "event_delete",
+        "get",
+        "getHistory"
+      ]
+    }
+  ]
+}
